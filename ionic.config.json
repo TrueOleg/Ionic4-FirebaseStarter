@@ -1,5 +1,7 @@
 {
-  "name": "dancersQ2018",
-  "integrations": {},
+  "name": "Ionic4-FirebaseStarter",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

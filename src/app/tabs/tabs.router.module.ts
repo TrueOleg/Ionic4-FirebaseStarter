@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 import { RouterModule, Routes } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
-import { HomePage } from '../home/home.page';
-import { AboutPage } from '../about/about.page';
-import { ContactPage } from '../contact/contact.page';
+import { HomePage } from '../pages/home/home.page';
+import { AboutPage } from '../pages/about/about.page';
+import { AccountPage } from '../pages/account/account.page';
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: '/tabs/(home:home)',
-        pathMatch: 'full',
+        pathMatch: 'full'
       },
       {
         path: 'home',
@@ -27,9 +28,9 @@ const routes: Routes = [
         component: AboutPage
       },
       {
-        path: 'contact',
-        outlet: 'contact',
-        component: ContactPage
+        path: 'account',
+        outlet: 'account',
+        component: AccountPage
       }
     ]
   },
@@ -41,7 +42,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  declarations: [TabsPage, HomePage, AboutPage, AccountPage],
+  imports: [RouterModule.forChild(routes), IonicModule],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }
