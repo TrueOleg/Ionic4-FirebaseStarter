@@ -7,17 +7,22 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
-        Follow us on Twitter
-      </ion-label>
-    </ion-list-header>
-    <ion-item>
-      <ion-label>
-        <ion-icon name="logo-ionic" slot="start"></ion-icon>
-        @ionicframework
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <ion-grid>
+    <ion-row justify-content-center>
+      <img src="http://www.gravatar.com/avatar?d=mm&s=140" alt="avatar">
+    </ion-row>
+    <h2>{{username}}</h2>
+
+    <ion-list inset>
+      <ion-item>item</ion-item>
+      <ion-item>item</ion-item>
+      <ion-item>item</ion-item>
+      <ion-item>item</ion-item>
+
+
+      <ion-item (click)="logOut()">LogOut</ion-item>
+    </ion-list>
+
+
+  </ion-grid>
 </ion-content>
